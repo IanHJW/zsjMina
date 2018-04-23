@@ -11,8 +11,7 @@ import org.apache.mina.core.session.IoSession;
  */
 public class ClientMessageHandler extends IoHandlerAdapter {
 
-
-    Imploded i = new Imploded();
+    Imploded imploded = new Imploded();
     @Override
     public void sessionCreated(IoSession session) throws Exception {
         super.sessionCreated(session);
@@ -37,13 +36,13 @@ public class ClientMessageHandler extends IoHandlerAdapter {
 	@Override
     public void messageReceived(IoSession session, Object message) throws Exception {
         String str = message.toString();
-        i.Date();
+        imploded.Date();
         System.out.println("服务器说："+str);
 
 
 
         //向server端发送数据
-        session.write(i.transMit());
+        session.write(imploded.transMit());
     }
 
     

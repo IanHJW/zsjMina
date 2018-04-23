@@ -2,17 +2,12 @@ package com.wyy.zsj.mina;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.charset.Charset;
 
 import com.wyy.zsj.server.factory.ServerCodecFactory;
 import com.wyy.zsj.server.handler.ServerMessageHandler;
-import com.wyy.zsj.service.TestService;
 import org.apache.mina.core.filterchain.DefaultIoFilterChainBuilder;
 import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
-import org.apache.mina.filter.codec.textline.LineDelimiter;
-import org.apache.mina.filter.codec.textline.TextLineCodecFactory;
-import org.apache.mina.filter.logging.LoggingFilter;
 import org.apache.mina.transport.socket.SocketAcceptor;
 import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
@@ -20,11 +15,6 @@ import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 /** 
 * @author  hjw
 * @date 创建时间：2018年4月8日 上午11:16:02
-* @Function: MinaServer.java
-* @version 1.0 
-* @Description: 该类的功能描述
-* @parameter  
-* @return  
 */
 public class MinaServer {
 	private SocketAcceptor acceptor;
@@ -40,18 +30,8 @@ public class MinaServer {
 
     public void start() throws IOException {
         DefaultIoFilterChainBuilder filterChain = acceptor.getFilterChain();
-//        LoggingFilter loggingFilter = new LoggingFilter();
-//        //生成日志
-//        filterChain.addLast("logging", loggingFilter);
-
-        // 添加编码过滤器 处理乱码、编码问题
+        //添加编码过滤器 处理乱码、编码问题
         filterChain.addLast("codec", new ProtocolCodecFilter(new ServerCodecFactory()));
-
-//        filterChain.addLast("codec",
-//                new ProtocolCodecFilter(
-//                        new TextLineCodecFactory(Charset.forName("UTF-8"),
-//                        LineDelimiter.WINDOWS.getValue(),
-//                                LineDelimiter.WINDOWS.getValue())));
 
          // 设置核心消息业务处理器
         acceptor.setHandler(new ServerMessageHandler());

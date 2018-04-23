@@ -13,19 +13,17 @@ import java.nio.charset.Charset;
 public class ClientCodecFactory implements ProtocolCodecFactory {
     private final ClientDecoder decoder;
     private final ClientEncoder encoder;
-    public ClientCodecFactory() {
-        this(Charset.defaultCharset());
-    }
+
     public ClientCodecFactory(Charset charset) {
         this.decoder = new ClientDecoder(charset);
         this.encoder = new ClientEncoder(charset);
     }
     @Override
-    public ProtocolEncoder getEncoder(IoSession session) throws Exception {
+    public ProtocolEncoder getEncoder(IoSession session)  {
         return encoder;
     }
     @Override
-    public ProtocolDecoder getDecoder(IoSession session) throws Exception {
+    public ProtocolDecoder getDecoder(IoSession session) {
         return decoder;
     }
 }

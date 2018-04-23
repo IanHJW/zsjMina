@@ -1,10 +1,10 @@
 package com.wyy.zsj.conversion;
 /** 
-* @author  黄军武（Ian）
+* @author  hjw
 * @date 创建时间：2018年4月8日 上午11:22:11
 * @Function: Convert.java
 * @version 1.0 
-* @Description: 该类的功能描述
+* @Description: string <--> byte[]
 * @parameter  
 * @return  
 */

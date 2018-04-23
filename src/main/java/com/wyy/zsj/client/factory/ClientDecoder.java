@@ -17,7 +17,7 @@ public class ClientDecoder extends CumulativeProtocolDecoder {
         charset = this.charset;
     }
     @Override
-    protected boolean doDecode(IoSession session, IoBuffer in, ProtocolDecoderOutput out) throws Exception {
+    protected boolean doDecode(IoSession session, IoBuffer in, ProtocolDecoderOutput out)  {
         System.out.println("*---------client解码-----------*");
 
         //标记位置

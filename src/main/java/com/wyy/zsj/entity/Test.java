@@ -1,6 +1,6 @@
 package com.wyy.zsj.entity;
 /**
- * Author: hjw
+ * @author: hjw
  * Data: 2018/4/13 13:58
  * Description: Test实体类
  */

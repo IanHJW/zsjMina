@@ -1,22 +1,19 @@
 package com.wyy.zsj.mina;
 
-import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.charset.Charset;
 
 import com.wyy.zsj.client.factory.ClientCodecFactory;
 import com.wyy.zsj.client.handler.ClientMessageHandler;
-import com.wyy.zsj.service.TestService;
 import org.apache.mina.core.future.ConnectFuture;
 import org.apache.mina.core.service.IoConnector;
 import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
-import org.apache.mina.filter.logging.LoggingFilter;
 import org.apache.mina.transport.socket.nio.NioSocketConnector;
 
 
 /** 
-* author  hjw
+* @author  hjw
 * date 创建时间：2018年4月8日 下午2:03:08
 * Function: MinaClient.java
 * version 1.0
@@ -35,21 +32,11 @@ private static ConnectFuture future;
         connector = new NioSocketConnector();
     }
 
-    public void start() throws IOException{
-        //日志
-//        LoggingFilter loggingFilter = new LoggingFilter();
-//        connector.getFilterChain().addLast("logging", loggingFilter);
-
+    public void start() {
         //添加字符的编码过滤器
         connector.getFilterChain().addLast("codec",
                 new ProtocolCodecFilter(
                         new ClientCodecFactory(Charset.forName("utf-8"))));
-
-//        connector.getFilterChain().addLast("codec",
-//                new ProtocolCodecFilter(
-//                        new TextLineCodecFactory(Charset.forName("utf-8"),
-//                        LineDelimiter.WINDOWS.getValue(),
-//                        LineDelimiter.WINDOWS.getValue())));
 
         //设置核心消息业务处理器
         connector.setHandler(new ClientMessageHandler());

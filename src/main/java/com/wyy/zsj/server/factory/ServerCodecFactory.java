@@ -26,10 +26,11 @@ public class ServerCodecFactory implements ProtocolCodecFactory {
         this.decoder = new ServerDecoder(charset);
         this.encoder = new ServerEncoder(charset);
     }
+    @Override
     public ProtocolEncoder getEncoder(IoSession session) throws Exception {
         return encoder;
     }
-
+    @Override
     public ProtocolDecoder getDecoder(IoSession session) throws Exception {
         return decoder;
     }

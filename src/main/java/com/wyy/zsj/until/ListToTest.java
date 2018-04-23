@@ -1,5 +1,5 @@
 /**
- * Author: hjw
+ * @author: hjw
  * Data: 2018/4/13 15:19
  * Description: String转成test
  */
@@ -7,7 +7,6 @@ package com.wyy.zsj.until;
 
 import com.wyy.zsj.entity.Test;
 
-import java.util.Iterator;
 import java.util.List;
 
 public class ListToTest {
@@ -15,9 +14,11 @@ public class ListToTest {
     public Test listToTest(List list){
         Test test = new Test();
         int b=0;
-        if(list.size()==19) {
+        int a1length=19;
+        int minus = 2;
+        if(list.size()==a1length) {
 
-            for (int i = 1; i < list.size() - 2; i++) {
+            for (int i = 1; i < list.size() - minus; i++) {
                 b++;
                 if (b == 1) {
                     test.setTempv((String) list.get(i));

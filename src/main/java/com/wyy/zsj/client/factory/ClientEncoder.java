@@ -22,8 +22,6 @@ public class ClientEncoder implements ProtocolEncoder {
     public void encode(IoSession session, Object message, ProtocolEncoderOutput out)  {
         System.out.println("*----------------client编码-----------------*");
         String str = message.toString();
-        //转成16进制
-//        byte[] bytes = Convert.hexStringToByte(str);
 
         if(str.length()==0){
             System.out.println("发送的值为空！");
