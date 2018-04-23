@@ -5,12 +5,18 @@ import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolEncoder;
 import org.apache.mina.filter.codec.ProtocolEncoderOutput;
 
+import java.nio.charset.Charset;
 
 /**
  * @author hjw
  * @date 2018/4/23
  */
 public class ClientEncoder implements ProtocolEncoder {
+    private final Charset charset;
+
+    public ClientEncoder(Charset charset) {
+        this.charset = charset;
+    }
 
     @Override
     public void encode(IoSession session, Object message, ProtocolEncoderOutput out)  {
