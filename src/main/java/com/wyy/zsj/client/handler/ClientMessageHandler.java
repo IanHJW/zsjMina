@@ -6,14 +6,9 @@ import org.apache.mina.core.session.IoSession;
 
 
 /** 
-* @author  黄军武（Ian）
-* @date 创建时间：2018年4月8日 上午11:27:52
-* @Function: ClientMessageHandler.java
-* @version 1.0 
-* @Description: 该类的功能描述
-* @parameter  
-* @return  
-*/
+* @author  hjw
+ *
+ */
 public class ClientMessageHandler extends IoHandlerAdapter {
 
 

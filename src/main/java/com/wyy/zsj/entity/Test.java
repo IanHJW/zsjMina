@@ -196,5 +196,28 @@ public class Test {
         this.speedv = speedv;
         this.pressurev = pressurev;
     }
+
+    @Override
+    public String toString() {
+        return "Test{" +
+                "id=" + id +
+                ", tempv='" + tempv + '\'' +
+                ", temp1v='" + temp1v + '\'' +
+                ", temp2v='" + temp2v + '\'' +
+                ", temp3v='" + temp3v + '\'' +
+                ", temp4v='" + temp4v + '\'' +
+                ", temp5v='" + temp5v + '\'' +
+                ", temp6v='" + temp6v + '\'' +
+                ", outputv='" + outputv + '\'' +
+                ", defectivev='" + defectivev + '\'' +
+                ", thimblerulerv='" + thimblerulerv + '\'' +
+                ", plasticrulerv='" + plasticrulerv + '\'' +
+                ", lockingrulerv='" + lockingrulerv + '\'' +
+                ", fulltimev='" + fulltimev + '\'' +
+                ", timev='" + timev + '\'' +
+                ", speedv='" + speedv + '\'' +
+                ", pressurev='" + pressurev + '\'' +
+                '}';
+    }
 }
 

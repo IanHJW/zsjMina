@@ -22,7 +22,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /** 
-* author  黄军武（Ian）
+* author  hjw
 * date 创建时间：2018年4月8日 上午11:26:56
 * Function: ServerMessageHandler.java
 * version 1.0

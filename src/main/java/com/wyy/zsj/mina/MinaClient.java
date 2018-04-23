@@ -16,7 +16,7 @@ import org.apache.mina.transport.socket.nio.NioSocketConnector;
 
 
 /** 
-* author  黄军武（Ian）
+* author  hjw
 * date 创建时间：2018年4月8日 下午2:03:08
 * Function: MinaClient.java
 * version 1.0

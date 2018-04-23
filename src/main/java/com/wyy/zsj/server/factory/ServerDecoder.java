@@ -11,7 +11,7 @@ import org.apache.mina.filter.codec.CumulativeProtocolDecoder;
 import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 
 /** 
-* @author  黄军武（Ian）
+* @author  hjw
 * @date 创建时间：2018年4月8日 上午11:22:56
 * @Function: ServerDecoder.java
 * @version 1.0 

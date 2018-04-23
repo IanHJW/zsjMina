@@ -50,4 +50,15 @@ public class Zsj {
     public void setBodyweight(Double bodyweight) {
         this.bodyweight = bodyweight;
     }
+
+    @Override
+    public String toString() {
+        return "Zsj{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", sex='" + sex + '\'' +
+                ", bodyweight=" + bodyweight +
+                '}';
+    }
 }

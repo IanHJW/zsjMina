@@ -8,7 +8,7 @@ import org.apache.mina.filter.codec.ProtocolDecoder;
 import org.apache.mina.filter.codec.ProtocolEncoder;
 
 /** 
-* @author  黄军武（Ian）
+* @author  hjw
 * @date 创建时间：2018年4月8日 上午11:23:35
 * @Function: ServerCodecFactory.java
 * @version 1.0 

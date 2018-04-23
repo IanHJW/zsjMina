@@ -8,7 +8,7 @@ import org.apache.mina.filter.codec.ProtocolDecoderOutput;
 import java.nio.charset.Charset;
 
 /**
- *
+ * @author hjw
  */
 public class ClientDecoder extends CumulativeProtocolDecoder {
     private Charset charset;

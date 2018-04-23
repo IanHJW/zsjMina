@@ -18,7 +18,7 @@ import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 
 
 /** 
-* @author  黄军武（Ian）
+* @author  hjw
 * @date 创建时间：2018年4月8日 上午11:16:02
 * @Function: MinaServer.java
 * @version 1.0 
