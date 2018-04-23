@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wyy.zsj.mapper.TestMapper" >
+    <resultMap id="BaseResultMap" type="com.wyy.zsj.entity.Test" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="tempV" property="tempv" jdbcType="VARCHAR" />
+        <result column="temp1V" property="temp1v" jdbcType="VARCHAR" />
+        <result column="temp2V" property="temp2v" jdbcType="VARCHAR" />
+        <result column="temp3V" property="temp3v" jdbcType="VARCHAR" />
+        <result column="temp4V" property="temp4v" jdbcType="VARCHAR" />
+        <result column="temp5V" property="temp5v" jdbcType="VARCHAR" />
+        <result column="temp6V" property="temp6v" jdbcType="VARCHAR" />
+        <result column="outputV" property="outputv" jdbcType="VARCHAR" />
+        <result column="defectiveV" property="defectivev" jdbcType="VARCHAR" />
+        <result column="thimblerulerV" property="thimblerulerv" jdbcType="VARCHAR" />
+        <result column="plasticrulerV" property="plasticrulerv" jdbcType="VARCHAR" />
+        <result column="lockingrulerV" property="lockingrulerv" jdbcType="VARCHAR" />
+        <result column="fulltimeV" property="fulltimev" jdbcType="VARCHAR" />
+        <result column="timeV" property="timev" jdbcType="VARCHAR" />
+        <result column="speedV" property="speedv" jdbcType="VARCHAR" />
+        <result column="pressureV" property="pressurev" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+        id, tempV, temp1V, temp2V, temp3V, temp4V, temp5V, temp6V, outputV, defectiveV, thimblerulerV,
+        plasticrulerV, lockingrulerV, fulltimeV, timeV, speedV, pressureV
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from test
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from test
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.wyy.zsj.entity.Test" >
+        insert into test (id, tempV, temp1V,
+        temp2V, temp3V, temp4V,
+        temp5V, temp6V, outputV,
+        defectiveV, thimblerulerV, plasticrulerV,
+        lockingrulerV, fulltimeV, timeV,
+        speedV, pressureV)
+        values (#{id,jdbcType=INTEGER}, #{tempv,jdbcType=VARCHAR}, #{temp1v,jdbcType=VARCHAR},
+        #{temp2v,jdbcType=VARCHAR}, #{temp3v,jdbcType=VARCHAR}, #{temp4v,jdbcType=VARCHAR},
+        #{temp5v,jdbcType=VARCHAR}, #{temp6v,jdbcType=VARCHAR}, #{outputv,jdbcType=VARCHAR},
+        #{defectivev,jdbcType=VARCHAR}, #{thimblerulerv,jdbcType=VARCHAR}, #{plasticrulerv,jdbcType=VARCHAR},
+        #{lockingrulerv,jdbcType=VARCHAR}, #{fulltimev,jdbcType=VARCHAR}, #{timev,jdbcType=VARCHAR},
+        #{speedv,jdbcType=VARCHAR}, #{pressurev,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="com.wyy.zsj.entity.Test" >
+        insert into test
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="tempv != null" >
+                tempV,
+            </if>
+            <if test="temp1v != null" >
+                temp1V,
+            </if>
+            <if test="temp2v != null" >
+                temp2V,
+            </if>
+            <if test="temp3v != null" >
+                temp3V,
+            </if>
+            <if test="temp4v != null" >
+                temp4V,
+            </if>
+            <if test="temp5v != null" >
+                temp5V,
+            </if>
+            <if test="temp6v != null" >
+                temp6V,
+            </if>
+            <if test="outputv != null" >
+                outputV,
+            </if>
+            <if test="defectivev != null" >
+                defectiveV,
+            </if>
+            <if test="thimblerulerv != null" >
+                thimblerulerV,
+            </if>
+            <if test="plasticrulerv != null" >
+                plasticrulerV,
+            </if>
+            <if test="lockingrulerv != null" >
+                lockingrulerV,
+            </if>
+            <if test="fulltimev != null" >
+                fulltimeV,
+            </if>
+            <if test="timev != null" >
+                timeV,
+            </if>
+            <if test="speedv != null" >
+                speedV,
+            </if>
+            <if test="pressurev != null" >
+                pressureV,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="tempv != null" >
+                #{tempv,jdbcType=VARCHAR},
+            </if>
+            <if test="temp1v != null" >
+                #{temp1v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp2v != null" >
+                #{temp2v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp3v != null" >
+                #{temp3v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp4v != null" >
+                #{temp4v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp5v != null" >
+                #{temp5v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp6v != null" >
+                #{temp6v,jdbcType=VARCHAR},
+            </if>
+            <if test="outputv != null" >
+                #{outputv,jdbcType=VARCHAR},
+            </if>
+            <if test="defectivev != null" >
+                #{defectivev,jdbcType=VARCHAR},
+            </if>
+            <if test="thimblerulerv != null" >
+                #{thimblerulerv,jdbcType=VARCHAR},
+            </if>
+            <if test="plasticrulerv != null" >
+                #{plasticrulerv,jdbcType=VARCHAR},
+            </if>
+            <if test="lockingrulerv != null" >
+                #{lockingrulerv,jdbcType=VARCHAR},
+            </if>
+            <if test="fulltimev != null" >
+                #{fulltimev,jdbcType=VARCHAR},
+            </if>
+            <if test="timev != null" >
+                #{timev,jdbcType=VARCHAR},
+            </if>
+            <if test="speedv != null" >
+                #{speedv,jdbcType=VARCHAR},
+            </if>
+            <if test="pressurev != null" >
+                #{pressurev,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.wyy.zsj.entity.Test" >
+        update test
+        <set >
+            <if test="tempv != null" >
+                tempV = #{tempv,jdbcType=VARCHAR},
+            </if>
+            <if test="temp1v != null" >
+                temp1V = #{temp1v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp2v != null" >
+                temp2V = #{temp2v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp3v != null" >
+                temp3V = #{temp3v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp4v != null" >
+                temp4V = #{temp4v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp5v != null" >
+                temp5V = #{temp5v,jdbcType=VARCHAR},
+            </if>
+            <if test="temp6v != null" >
+                temp6V = #{temp6v,jdbcType=VARCHAR},
+            </if>
+            <if test="outputv != null" >
+                outputV = #{outputv,jdbcType=VARCHAR},
+            </if>
+            <if test="defectivev != null" >
+                defectiveV = #{defectivev,jdbcType=VARCHAR},
+            </if>
+            <if test="thimblerulerv != null" >
+                thimblerulerV = #{thimblerulerv,jdbcType=VARCHAR},
+            </if>
+            <if test="plasticrulerv != null" >
+                plasticrulerV = #{plasticrulerv,jdbcType=VARCHAR},
+            </if>
+            <if test="lockingrulerv != null" >
+                lockingrulerV = #{lockingrulerv,jdbcType=VARCHAR},
+            </if>
+            <if test="fulltimev != null" >
+                fulltimeV = #{fulltimev,jdbcType=VARCHAR},
+            </if>
+            <if test="timev != null" >
+                timeV = #{timev,jdbcType=VARCHAR},
+            </if>
+            <if test="speedv != null" >
+                speedV = #{speedv,jdbcType=VARCHAR},
+            </if>
+            <if test="pressurev != null" >
+                pressureV = #{pressurev,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.wyy.zsj.entity.Test" >
+        update test
+        set tempV = #{tempv,jdbcType=VARCHAR},
+        temp1V = #{temp1v,jdbcType=VARCHAR},
+        temp2V = #{temp2v,jdbcType=VARCHAR},
+        temp3V = #{temp3v,jdbcType=VARCHAR},
+        temp4V = #{temp4v,jdbcType=VARCHAR},
+        temp5V = #{temp5v,jdbcType=VARCHAR},
+        temp6V = #{temp6v,jdbcType=VARCHAR},
+        outputV = #{outputv,jdbcType=VARCHAR},
+        defectiveV = #{defectivev,jdbcType=VARCHAR},
+        thimblerulerV = #{thimblerulerv,jdbcType=VARCHAR},
+        plasticrulerV = #{plasticrulerv,jdbcType=VARCHAR},
+        lockingrulerV = #{lockingrulerv,jdbcType=VARCHAR},
+        fulltimeV = #{fulltimev,jdbcType=VARCHAR},
+        timeV = #{timev,jdbcType=VARCHAR},
+        speedV = #{speedv,jdbcType=VARCHAR},
+        pressureV = #{pressurev,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>
