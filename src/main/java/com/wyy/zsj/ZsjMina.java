@@ -5,16 +5,19 @@
  */
 package com.wyy.zsj;
 
-import com.wyy.zsj.mina.MinaClient;
-import com.wyy.zsj.mina.MinaServer;
 import com.wyy.zsj.until.SpringContextUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.io.IOException;
 
+/**
+ *  @EnableAdminServer 心跳反应的启用
+ */
 @SpringBootApplication
+@ComponentScan("")
 public class ZsjMina {
 
     /**
@@ -29,13 +32,13 @@ public class ZsjMina {
     public static void main(String[] args) {
         SpringApplication.run(ZsjMina.class,args);
 
-        MinaServer minaServer = new MinaServer();
-        MinaClient minaClient = new MinaClient();
-        try {
-            minaServer.start();
-            minaClient.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        MinaServer minaServer = new MinaServer();
+//        MinaClient minaClient = new MinaClient();
+//        try {
+//            minaServer.start();
+//            minaClient.start();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 }

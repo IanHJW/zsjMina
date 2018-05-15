@@ -15,6 +15,7 @@ public class ListToTest {
         Test test = new Test();
         int b=0;
         int a1length=19;
+
         int minus = 2;
         if(list.size()==a1length) {
 
@@ -22,6 +23,7 @@ public class ListToTest {
                 b++;
                 if (b == 1) {
                     test.setTempv((String) list.get(i));
+                    continue;
                 }
                 if (b == 2) {
                     test.setTemp1v((String) list.get(i));

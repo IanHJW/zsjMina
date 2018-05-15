@@ -51,6 +51,29 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.30</version>
         </dependency>
+        <!-- Spring Boot Admin -->
+
+        <!--<dependency>-->
+            <!--<groupId>org.apache.mina</groupId>-->
+            <!--<artifactId>mina-integration-beans</artifactId>-->
+            <!--<version>2.0.13</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.mina</groupId>-->
+            <!--<artifactId>mina-core</artifactId>-->
+            <!--<version>2.0.13</version>-->
+            <!--<type>bundle</type>-->
+            <!--<scope>compile</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.mina</groupId>-->
+            <!--<artifactId>mina-integration-spring</artifactId>-->
+            <!--<version>1.1.7</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -82,6 +105,12 @@
                     <verbose>true</verbose>
                 </configuration>
             </plugin>
+
+            <!--<plugin>-->
+                <!--<groupId>org.apache.felix</groupId>-->
+                <!--<artifactId>maven-bundle-plugin</artifactId>-->
+                <!--<extensions>true</extensions>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 
